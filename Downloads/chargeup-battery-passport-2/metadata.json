@@ -1,0 +1,5 @@
+{
+  "name": "Chargeup Battery Passport",
+  "description": "Frontend interface for the Battery Aadhaar System and Passport v2.0 tracking.",
+  "requestFramePermissions": []
+}
