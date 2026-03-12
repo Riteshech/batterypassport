@@ -48,13 +48,9 @@ const Dashboard: React.FC<DashboardProps> = ({ onBack, isDemo, isLoggedIn, onLog
 
                     <div className="flex items-center gap-3">
                          <img 
-                            src="https://chargeup.in/wp-content/uploads/2024/05/logo.svg" 
+                            src="/chargeup-logo.png"
                             alt="Chargeup" 
-                            className="h-7 w-auto"
-                            onError={(e) => {
-                               e.currentTarget.style.display = 'none';
-                               e.currentTarget.parentElement!.innerHTML = '<span class="text-xl font-bold tracking-tight text-slate-900"><span class="text-green-600">charge</span>up</span>';
-                            }}
+                            className="h-8 w-auto"
                          />
                          <span className="text-slate-300 text-xl font-light hidden md:inline">|</span>
                          <span className="font-semibold text-slate-600 hidden md:inline">Battery Passport</span>
