@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck, BarChart3, Activity, RefreshCw, Zap, Globe, Lock } from 'lucide-react';
+import { ArrowRight, ShieldCheck, BarChart3, Activity, RefreshCw } from 'lucide-react';
 
 interface LandingPageProps {
   onSamplePassport: () => void;
@@ -64,23 +64,26 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSamplePassport, onViewPassp
             {/* Left: Text Content */}
             <div className="text-center lg:text-left">
 
+              {/* Product Name */}
+              <div className="mb-3">
+                <span className="text-2xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-teal-300 to-green-500">
+                  AmpLedger
+                </span>
+              </div>
+
               {/* Tag */}
-              <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-1.5 mb-6 text-green-400 text-xs font-semibold tracking-widest uppercase">
+              <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-1.5 mb-7 text-green-400 text-xs font-semibold tracking-widest uppercase">
                 <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse inline-block"></span>
                 Blockchain-Powered Platform
               </div>
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] mb-6">
-                Battery{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-300">
-                  Passport
-                </span>
-                <br />
-                Platform
+              {/* Title */}
+              <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight leading-snug mb-4 text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-300">
+                India's trusted battery passport infrastructure for the EV ecosystem.
               </h1>
 
-              <p className="text-lg text-slate-400 mb-10 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                India's trusted battery passport infrastructure for the EV ecosystem.
+              {/* Subtitle */}
+              <p className="text-base text-slate-400 mb-10 leading-relaxed max-w-lg mx-auto lg:mx-0">
                 A blockchain-powered platform that creates a unique digital identity for every lithium-ion battery — enabling transparent tracking, real-time diagnostics, and lifecycle management from manufacturing to second-life and recycling.
               </p>
 
@@ -132,18 +135,6 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSamplePassport, onViewPassp
                   className="w-full h-auto object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] hover:scale-[1.02] transition-transform duration-500"
                   style={{ filter: 'drop-shadow(0 0 40px rgba(52,211,153,0.15))' }}
                 />
-
-                {/* Floating badge - Live */}
-                <div className="absolute top-6 right-0 flex items-center gap-2 bg-slate-900/90 border border-green-500/30 rounded-full px-3 py-1.5 backdrop-blur-sm shadow-xl">
-                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse inline-block"></span>
-                  <span className="text-xs font-semibold text-green-400">LIVE TRACKING</span>
-                </div>
-
-                {/* Floating badge - Blockchain */}
-                <div className="absolute bottom-8 left-0 flex items-center gap-2 bg-slate-900/90 border border-teal-500/30 rounded-full px-3 py-1.5 backdrop-blur-sm shadow-xl">
-                  <Lock size={11} className="text-teal-400" />
-                  <span className="text-xs font-semibold text-teal-400">BLOCKCHAIN SECURED</span>
-                </div>
               </div>
             </div>
 
