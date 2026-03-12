@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
     server: {
       port: 5000,
       host: '0.0.0.0',
-      allowedHosts: 'all'   // ✅ allows external preview hosts like Replit
+      allowedHosts: true
     },
 
     plugins: [react()],
