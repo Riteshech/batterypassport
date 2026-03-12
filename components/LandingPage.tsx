@@ -73,15 +73,15 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSamplePassport, onViewPassp
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] mb-6">
                 Battery{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-300">
-                  Aadhaar
+                  Passport
                 </span>
                 <br />
                 Platform
               </h1>
 
               <p className="text-lg text-slate-400 mb-10 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                Revolutionary blockchain-powered battery lifecycle management for India's EV ecosystem.
-                Track, verify, and optimize every battery from manufacturing to recycling with unprecedented transparency.
+                India's trusted battery passport infrastructure for the EV ecosystem.
+                A blockchain-powered platform that creates a unique digital identity for every lithium-ion battery — enabling transparent tracking, real-time diagnostics, and lifecycle management from manufacturing to second-life and recycling.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-14">
@@ -102,10 +102,10 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSamplePassport, onViewPassp
               {/* Feature Grid */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {[
-                  { icon: ShieldCheck, label: 'Blockchain\nVerified', color: 'text-green-400', bg: 'bg-green-500/10 border-green-500/20' },
-                  { icon: Activity, label: 'Real-time\nMonitoring', color: 'text-blue-400', bg: 'bg-blue-500/10 border-blue-500/20' },
-                  { icon: BarChart3, label: 'Performance\nAnalytics', color: 'text-amber-400', bg: 'bg-amber-500/10 border-amber-500/20' },
-                  { icon: RefreshCw, label: 'Complete\nLifecycle', color: 'text-teal-400', bg: 'bg-teal-500/10 border-teal-500/20' },
+                  { icon: ShieldCheck, label: 'Trusted Battery\nIdentity', color: 'text-green-400', bg: 'bg-green-500/10 border-green-500/20' },
+                  { icon: Activity, label: 'Live Battery\nIntelligence', color: 'text-blue-400', bg: 'bg-blue-500/10 border-blue-500/20' },
+                  { icon: BarChart3, label: 'Smart\nAnalytics', color: 'text-amber-400', bg: 'bg-amber-500/10 border-amber-500/20' },
+                  { icon: RefreshCw, label: 'Circular Lifecycle\nTracking', color: 'text-teal-400', bg: 'bg-teal-500/10 border-teal-500/20' },
                 ].map(({ icon: Icon, label, color, bg }) => (
                   <div key={label} className="flex flex-col items-center lg:items-start gap-2.5">
                     <div className={`w-11 h-11 ${bg} border rounded-xl flex items-center justify-center ${color}`}>

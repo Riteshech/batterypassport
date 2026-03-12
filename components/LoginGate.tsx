@@ -100,18 +100,18 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
     switch (activeTab) {
         case "Material Comp.":
             return (
-                <div className="flex flex-col h-full bg-white rounded-xl overflow-hidden">
+                <div className="flex flex-col h-full bg-transparent rounded-xl overflow-hidden">
                     {/* Header */}
-                    <div className="px-6 py-4 border-b border-slate-100 bg-slate-50/80 backdrop-blur-sm flex items-center justify-between shrink-0 h-[64px]">
+                    <div className="px-6 py-4 border-b border-white/5 bg-white/3 backdrop-blur-sm flex items-center justify-between shrink-0 h-[64px]">
                         <div>
-                            <h3 className="font-bold text-slate-800 flex items-center gap-2 text-sm">
-                                <Layers size={18} className="text-[#004D40]" />
+                            <h3 className="font-bold text-slate-300 flex items-center gap-2 text-sm">
+                                <Layers size={18} className="text-green-500" />
                                 BOM Component Breakdown
                             </h3>
-                            <p className="text-[10px] text-slate-400 pl-6.5 mt-0.5 font-medium">Detailed Level 1 bill of materials</p>
+                            <p className="text-[10px] text-slate-500 pl-6.5 mt-0.5 font-medium">Detailed Level 1 bill of materials</p>
                         </div>
                         <div className="flex items-center gap-2">
-                             <span className="text-[10px] uppercase font-bold text-slate-500 bg-white border border-slate-200 px-2.5 py-1 rounded-full shadow-sm">
+                             <span className="text-[10px] uppercase font-bold text-green-400 bg-green-500/10 border border-green-500/20 px-2.5 py-1 rounded-full">
                                 Verified
                             </span>
                         </div>
@@ -120,31 +120,31 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
                     {/* Table Container */}
                     <div className="flex-1 overflow-y-auto custom-scrollbar p-0">
                         <table className="w-full text-left border-collapse">
-                            <thead className="sticky top-0 bg-white/95 backdrop-blur shadow-sm z-10">
+                            <thead className="sticky top-0 bg-slate-900/95 backdrop-blur shadow-sm z-10">
                                 <tr>
-                                    <th className="px-6 py-3 text-[10px] font-bold text-slate-400 uppercase tracking-wider border-b border-slate-100 w-[40%]">
+                                    <th className="px-6 py-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider border-b border-white/5 w-[40%]">
                                         Parameter
                                     </th>
-                                    <th className="px-6 py-3 text-[10px] font-bold text-slate-400 uppercase tracking-wider border-b border-slate-100">
+                                    <th className="px-6 py-3 text-[10px] font-bold text-slate-500 uppercase tracking-wider border-b border-white/5">
                                         Specification
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-slate-50">
+                            <tbody className="divide-y divide-white/5">
                                 {COMPONENT_BREAKDOWN.map((item, index) => (
-                                    <tr key={index} className="group hover:bg-green-50/30 transition-colors duration-200">
+                                    <tr key={index} className="group hover:bg-green-500/5 transition-colors duration-200">
                                         <td className="px-6 py-3.5 align-middle">
                                             <div className="flex items-center gap-3">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-200 group-hover:bg-[#10B981] transition-colors duration-300"></div>
-                                                <span className="text-xs font-bold text-slate-700 group-hover:text-[#004D40] transition-colors uppercase tracking-wide">
+                                                <div className="w-1.5 h-1.5 rounded-full bg-slate-600 group-hover:bg-green-500 transition-colors duration-300"></div>
+                                                <span className="text-xs font-bold text-slate-400 group-hover:text-slate-200 transition-colors uppercase tracking-wide">
                                                     {item.component}
                                                 </span>
                                             </div>
                                         </td>
                                         <td className="px-6 py-3.5 align-middle">
                                             <div className="flex items-center gap-2">
-                                                <Beaker size={14} className="text-slate-300 group-hover:text-green-500 transition-colors" />
-                                                <span className="text-sm font-semibold text-slate-600 group-hover:text-slate-900 transition-colors font-mono">
+                                                <Beaker size={14} className="text-slate-600 group-hover:text-green-500 transition-colors" />
+                                                <span className="text-sm font-semibold text-slate-400 group-hover:text-slate-200 transition-colors font-mono">
                                                     {item.materials}
                                                 </span>
                                             </div>
@@ -167,36 +167,36 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
              ];
 
              return (
-                <div className="flex flex-col h-full bg-white rounded-xl overflow-hidden">
-                    {/* Header - Increased Size */}
-                    <div className="px-6 py-4 border-b border-slate-100 bg-slate-50/80 backdrop-blur-sm flex items-center justify-between shrink-0 h-[64px]">
+                <div className="flex flex-col h-full bg-transparent rounded-xl overflow-hidden">
+                    {/* Header */}
+                    <div className="px-6 py-4 border-b border-white/5 bg-white/3 backdrop-blur-sm flex items-center justify-between shrink-0 h-[64px]">
                         <div>
-                            <h3 className="font-extrabold text-slate-900 flex items-center gap-2 text-xl tracking-tight">
-                                <Activity size={22} className="text-[#004D40]" />
+                            <h3 className="font-extrabold text-slate-200 flex items-center gap-2 text-xl tracking-tight">
+                                <Activity size={22} className="text-green-500" />
                                 Real-time Performance
                             </h3>
-                            <p className="text-[10px] text-slate-400 pl-8 mt-0.5 font-medium">Live telemetry from BMS</p>
+                            <p className="text-[10px] text-slate-500 pl-8 mt-0.5 font-medium">Live telemetry from BMS</p>
                         </div>
                          <div className="flex items-center gap-2">
                              <span className="relative flex h-2.5 w-2.5">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
                              </span>
-                             <span className="text-[10px] font-bold text-green-600 uppercase tracking-wide">Live Stream</span>
+                             <span className="text-[10px] font-bold text-green-400 uppercase tracking-wide">Live Stream</span>
                         </div>
                     </div>
 
-                    {/* Cards Grid - Centered Flex Container */}
+                    {/* Cards Grid */}
                     <div className="flex-1 overflow-y-auto custom-scrollbar p-6 flex flex-col justify-center">
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
                             {performanceCards.map((item, index) => (
-                                <div key={index} className="bg-white border border-slate-100 shadow-sm rounded-2xl p-6 flex items-center gap-5 hover:shadow-md transition-all group hover:border-slate-200">
-                                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shrink-0 ${item.bg} ${item.text} group-hover:scale-105 transition-transform shadow-sm`}>
+                                <div key={index} className="bg-white/5 border border-white/8 rounded-2xl p-6 flex items-center gap-5 hover:bg-white/8 hover:border-white/15 transition-all group">
+                                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shrink-0 ${item.bg} ${item.text} group-hover:scale-105 transition-transform`}>
                                         <item.icon size={32} strokeWidth={1.5} />
                                     </div>
                                     <div className="flex flex-col">
-                                        <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">{item.label}</div>
-                                        <div className="text-3xl font-extrabold text-slate-800 font-mono tracking-tight leading-none">{item.value}</div>
+                                        <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">{item.label}</div>
+                                        <div className="text-3xl font-extrabold text-slate-100 font-mono tracking-tight leading-none">{item.value}</div>
                                     </div>
                                 </div>
                             ))}
@@ -209,21 +209,21 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
             const progressPercent = (activeStepIndex / (LIFECYCLE_STEPS.length - 1)) * 100;
             
             return (
-                <div className="flex flex-col h-full bg-white rounded-xl overflow-hidden relative">
+                <div className="flex flex-col h-full bg-transparent rounded-xl overflow-hidden relative">
                     {/* Background Pattern */}
-                    <div className="absolute inset-0 bg-[radial-gradient(#f1f5f9_1px,transparent_1px)] [background-size:20px_20px] opacity-50"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:20px_20px]"></div>
 
                     {/* Header */}
-                    <div className="px-6 py-4 border-b border-slate-100 bg-white/80 backdrop-blur-md flex items-center justify-between shrink-0 h-[64px] relative z-10">
+                    <div className="px-6 py-4 border-b border-white/5 bg-white/3 backdrop-blur-md flex items-center justify-between shrink-0 h-[64px] relative z-10">
                         <div>
-                            <h3 className="font-bold text-slate-800 flex items-center gap-2 text-sm">
-                                <RefreshCw size={18} className="text-[#004D40]" />
+                            <h3 className="font-bold text-slate-300 flex items-center gap-2 text-sm">
+                                <RefreshCw size={18} className="text-green-500" />
                                 Lifecycle Tracking
                             </h3>
-                            <p className="text-[10px] text-slate-400 pl-6.5 mt-0.5 font-medium">Chain of custody & state verification</p>
+                            <p className="text-[10px] text-slate-500 pl-6.5 mt-0.5 font-medium">Chain of custody & state verification</p>
                         </div>
                         <div className="flex items-center gap-2">
-                             <div className="text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 px-3 py-1 rounded-full shadow-sm flex items-center gap-1.5">
+                             <div className="text-[10px] font-bold text-green-400 bg-green-500/10 border border-green-500/20 px-3 py-1 rounded-full flex items-center gap-1.5">
                                 <span className="relative flex h-2 w-2">
                                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                                   <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
@@ -317,13 +317,13 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
             return (
                 <div className="flex w-full h-full">
                     {/* LEFT: Table (40%) */}
-                    <div className="w-[45%] border-r border-slate-100 flex flex-col h-full bg-white z-10 relative">
-                        <div className="px-5 py-3 border-b border-slate-100 bg-slate-50/80 shrink-0 h-[50px] flex items-center justify-between">
-                            <h3 className="text-xs font-bold text-slate-700 flex items-center gap-2">
-                                <Database size={14} className="text-slate-400" />
+                    <div className="w-[45%] border-r border-white/5 flex flex-col h-full bg-transparent z-10 relative">
+                        <div className="px-5 py-3 border-b border-white/5 bg-white/3 shrink-0 h-[50px] flex items-center justify-between">
+                            <h3 className="text-xs font-bold text-slate-400 flex items-center gap-2">
+                                <Database size={14} className="text-slate-500" />
                                 Mass Distribution
                             </h3>
-                            <button className="text-slate-300 hover:text-slate-500 transition-colors">
+                            <button className="text-slate-600 hover:text-slate-400 transition-colors">
                                 <Info size={14} />
                             </button>
                         </div>
@@ -331,21 +331,21 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
                              <table className="w-full">
                                 <tbody>
                                     {MATERIAL_DATA.map((item, idx) => (
-                                        <tr key={idx} className="border-b border-slate-50 last:border-0 group hover:bg-slate-50 transition-colors">
+                                        <tr key={idx} className="border-b border-white/5 last:border-0 group hover:bg-white/5 transition-colors">
                                             <td className="px-5 py-3.5">
                                                 <div className="flex items-center gap-3">
-                                                    <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-slate-50 border border-slate-100 group-hover:border-slate-200 transition-colors shadow-sm shrink-0">
+                                                    <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-white/5 border border-white/8 group-hover:border-white/15 transition-colors shrink-0">
                                                          <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: item.fill }}></div>
                                                     </div>
                                                     <div className="min-w-0">
-                                                        <div className="text-xs font-bold text-slate-700 truncate">{item.name}</div>
-                                                        <div className="text-[9px] text-slate-400 font-medium uppercase tracking-wide">Weight %</div>
+                                                        <div className="text-xs font-bold text-slate-400 truncate">{item.name}</div>
+                                                        <div className="text-[9px] text-slate-600 font-medium uppercase tracking-wide">Weight %</div>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td className="px-5 py-3.5 text-right w-[100px]">
-                                                <div className="text-xs font-bold text-slate-800 font-mono mb-1.5">{item.value}%</div>
-                                                <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                                                <div className="text-xs font-bold text-slate-300 font-mono mb-1.5">{item.value}%</div>
+                                                <div className="w-full h-1.5 bg-white/10 rounded-full overflow-hidden">
                                                     <div 
                                                         className="h-full rounded-full transition-all duration-1000 ease-out" 
                                                         style={{ width: `${item.value}%`, backgroundColor: item.fill }}
@@ -423,7 +423,7 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
              const activeConfig = graphConfig[selectedMetric] || graphConfig['SOH'];
 
              return (
-                 <div className="w-full h-full flex flex-col bg-white p-6">
+                 <div className="w-full h-full flex flex-col bg-transparent p-6">
                      {/* Top Horizontal Cards */}
                      <div className="grid grid-cols-4 gap-4 mb-6 shrink-0">
                          {['SOH', 'Voltage', 'Distance', 'Temp'].map((metric) => {
@@ -435,46 +435,41 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
                                      className={`
                                         flex flex-col items-start p-4 rounded-xl border transition-all duration-300 relative overflow-hidden group
                                         ${isSelected 
-                                            ? 'bg-slate-800 border-slate-800 text-white shadow-lg ring-2 ring-offset-2 ring-slate-800' 
-                                            : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50'
+                                            ? 'bg-green-600 border-green-600 text-white shadow-lg' 
+                                            : 'bg-white/5 border-white/8 text-slate-400 hover:border-white/15 hover:bg-white/8'
                                         }
                                      `}
                                  >
                                      <div className="flex items-center justify-between w-full mb-2">
-                                         <span className={`text-[10px] font-bold uppercase tracking-wider ${isSelected ? 'text-slate-400' : 'text-slate-400'}`}>
+                                         <span className={`text-[10px] font-bold uppercase tracking-wider ${isSelected ? 'text-green-200' : 'text-slate-500'}`}>
                                             {metric === 'Temp' ? 'Temperature' : metric}
                                          </span>
-                                         {isSelected && <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>}
+                                         {isSelected && <div className="w-1.5 h-1.5 bg-green-300 rounded-full animate-pulse"></div>}
                                      </div>
-                                     <div className={`text-xl font-bold font-mono ${isSelected ? 'text-white' : 'text-slate-800'}`}>
+                                     <div className={`text-xl font-bold font-mono ${isSelected ? 'text-white' : 'text-slate-200'}`}>
                                          {metric === 'SOH' ? BATTERY_DATA.soh : 
                                           metric === 'Voltage' ? BATTERY_DATA.currentVoltage : 
                                           metric === 'Distance' ? BATTERY_DATA.distance : 
                                           BATTERY_DATA.avgTemp}
                                      </div>
-                                     
-                                     {/* Hover visual */}
-                                     {!isSelected && (
-                                         <div className="absolute bottom-0 left-0 h-1 bg-slate-200 w-full transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                                     )}
                                  </button>
                              );
                          })}
                      </div>
 
-                     {/* Dynamic Graph Area - Expanded and Fixed Overlap */}
-                     <div className="flex-1 bg-slate-50 rounded-xl border border-slate-100 p-6 flex flex-col relative overflow-hidden">
+                     {/* Dynamic Graph Area */}
+                     <div className="flex-1 bg-white/5 rounded-xl border border-white/8 p-6 flex flex-col relative overflow-hidden">
                          <div className="flex items-center gap-3 mb-6 shrink-0 z-10">
-                            <div className="p-2 rounded-lg bg-white shadow-sm border border-slate-200">
+                            <div className="p-2 rounded-lg bg-white/5 border border-white/8">
                                 <TrendingUp size={18} style={{ color: activeConfig.color }} />
                             </div>
                             <div>
-                                <div className="text-sm font-bold text-slate-700 uppercase tracking-wide flex items-center gap-2">
+                                <div className="text-sm font-bold text-slate-300 uppercase tracking-wide flex items-center gap-2">
                                     {selectedMetric} Analysis
-                                    <span className="text-slate-300">/</span>
-                                    <span className="text-slate-400">Cycles</span>
+                                    <span className="text-slate-600">/</span>
+                                    <span className="text-slate-500">Cycles</span>
                                 </div>
-                                <div className="text-[10px] text-slate-400 font-medium mt-0.5">Historical trend analysis over lifecycle</div>
+                                <div className="text-[10px] text-slate-600 font-medium mt-0.5">Historical trend analysis over lifecycle</div>
                             </div>
                          </div>
                          
@@ -483,23 +478,23 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
                                  <AreaChart data={PERFORMANCE_HISTORY} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
                                     <defs>
                                         <linearGradient id="colorMetric" x1="0" y1="0" x2="0" y2="1">
-                                            <stop offset="5%" stopColor={activeConfig.color} stopOpacity={0.3}/>
+                                            <stop offset="5%" stopColor={activeConfig.color} stopOpacity={0.4}/>
                                             <stop offset="95%" stopColor={activeConfig.color} stopOpacity={0}/>
                                         </linearGradient>
                                     </defs>
-                                    <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
+                                    <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.05)" />
                                     <XAxis 
                                         dataKey="cycle" 
                                         axisLine={false} 
                                         tickLine={false} 
-                                        tick={{fontSize: 10, fill: '#94a3b8'}}
+                                        tick={{fontSize: 10, fill: '#475569'}}
                                         tickMargin={10}
                                     />
                                     <YAxis 
                                         hide={false}
                                         axisLine={false}
                                         tickLine={false}
-                                        tick={{fontSize: 10, fill: '#94a3b8'}}
+                                        tick={{fontSize: 10, fill: '#475569'}}
                                         domain={['auto', 'auto']}
                                     />
                                     <RechartsTooltip content={<CustomAreaTooltip />} />
@@ -520,26 +515,26 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
              );
         case "Lifecycle":
             return (
-                 <div className="w-full h-full flex flex-col bg-white p-6">
+                 <div className="w-full h-full flex flex-col bg-transparent p-6">
                      <div className="flex items-center justify-between mb-6 shrink-0">
                         <div className="flex items-center gap-3">
-                             <div className="p-2 rounded-lg bg-green-50 shadow-sm border border-green-100">
-                                 <DollarSign size={18} className="text-green-600" />
+                             <div className="p-2 rounded-lg bg-green-500/10 border border-green-500/20">
+                                 <DollarSign size={18} className="text-green-400" />
                              </div>
                              <div>
-                                 <h4 className="text-sm font-bold text-slate-800 uppercase tracking-wide">Estimated Residual Value</h4>
-                                 <p className="text-[10px] text-slate-400 font-medium mt-0.5">Asset value depreciation projection</p>
+                                 <h4 className="text-sm font-bold text-slate-300 uppercase tracking-wide">Estimated Residual Value</h4>
+                                 <p className="text-[10px] text-slate-500 font-medium mt-0.5">Asset value depreciation projection</p>
                              </div>
                         </div>
-                        <div className="bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 flex items-center gap-2">
-                            <Calendar size={14} className="text-slate-400"/>
-                             <span className="text-xs font-bold text-slate-600">
-                                Current Value: <span className="text-green-600">88%</span>
+                        <div className="bg-white/5 border border-white/8 rounded-lg px-3 py-1.5 flex items-center gap-2">
+                            <Calendar size={14} className="text-slate-500"/>
+                             <span className="text-xs font-bold text-slate-400">
+                                Current Value: <span className="text-green-400">88%</span>
                              </span>
                         </div>
                      </div>
 
-                     <div className="flex-1 bg-slate-50 rounded-xl border border-slate-100 p-6 relative overflow-hidden">
+                     <div className="flex-1 bg-white/5 rounded-xl border border-white/8 p-6 relative overflow-hidden">
                          <ResponsiveContainer width="100%" height="100%">
                              <AreaChart data={RESIDUAL_VALUE_DATA} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
                                 <defs>
@@ -548,19 +543,19 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
                                         <stop offset="95%" stopColor="#10B981" stopOpacity={0}/>
                                     </linearGradient>
                                 </defs>
-                                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
+                                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.05)" />
                                 <XAxis 
                                     dataKey="year" 
                                     axisLine={false} 
                                     tickLine={false} 
-                                    tick={{fontSize: 10, fill: '#94a3b8'}}
+                                    tick={{fontSize: 10, fill: '#475569'}}
                                     tickMargin={10}
                                 />
                                 <YAxis 
                                     hide={false}
                                     axisLine={false}
                                     tickLine={false}
-                                    tick={{fontSize: 10, fill: '#94a3b8'}}
+                                    tick={{fontSize: 10, fill: '#475569'}}
                                     domain={[0, 100]}
                                     unit="%"
                                 />
@@ -581,8 +576,8 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
             );
         default:
             return (
-                 <div className="w-full h-full flex items-center justify-center border-2 border-dashed border-slate-100 rounded-xl m-0">
-                     <span className="text-slate-300 font-bold uppercase tracking-widest text-sm">
+                 <div className="w-full h-full flex items-center justify-center border-2 border-dashed border-white/8 rounded-xl m-0">
+                     <span className="text-slate-600 font-bold uppercase tracking-widest text-sm">
                         {activeTab} Analysis
                      </span>
                  </div>
@@ -603,10 +598,10 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
         {/* LEFT SIDEBAR - Fixed Width, Full Height of Container */}
         <div className="w-full md:w-[280px] shrink-0 h-[400px] md:h-full relative flex flex-col">
              {/* Top Decorative Handle */}
-             <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-4 bg-green-50 border-t-2 border-l-2 border-r-2 border-[#10B981] rounded-t-md z-0"></div>
+             <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-4 bg-green-500/10 border-t-2 border-l-2 border-r-2 border-green-500/40 rounded-t-md z-0"></div>
              
-             {/* Navigation Container - Stacks Items Evenly */}
-             <div className="bg-white border-2 border-[#10B981] rounded-xl shadow-lg z-10 flex flex-col h-full overflow-hidden py-4 justify-evenly">
+             {/* Navigation Container */}
+             <div className="bg-slate-900/80 backdrop-blur-sm border border-green-500/30 rounded-xl shadow-lg z-10 flex flex-col h-full overflow-hidden py-4 justify-evenly">
                 {tabs.map((tab) => {
                     const isActive = isUnlocked && activeTab === tab;
                     return (
@@ -617,26 +612,25 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
                             className={`
                                 group relative flex items-center justify-between px-6 py-3 w-full text-left transition-all
                                 ${isActive 
-                                    ? 'bg-[#10B981] text-white shadow-md mx-auto w-[90%] rounded-lg scale-105' 
-                                    : 'bg-white text-slate-700 hover:bg-slate-50'
+                                    ? 'bg-green-600 text-white shadow-md mx-auto w-[90%] rounded-lg scale-105' 
+                                    : 'bg-transparent text-slate-400 hover:bg-white/5 hover:text-slate-200'
                                 }
-                                ${!isUnlocked ? 'cursor-not-allowed opacity-70' : 'cursor-pointer'}
+                                ${!isUnlocked ? 'cursor-not-allowed opacity-50' : 'cursor-pointer'}
                             `}
                         >
-                            <span className={`text-sm font-bold tracking-tight ${isActive ? 'text-white' : 'text-slate-800'}`}>
+                            <span className={`text-sm font-bold tracking-tight ${isActive ? 'text-white' : ''}`}>
                                 {tab}
                             </span>
                             
-                            {/* Icon Indicator */}
                             <div className={`w-6 h-6 rounded-full flex items-center justify-center transition-all
-                                ${isActive ? 'bg-white/20 text-white' : 'bg-green-50 text-green-400'}
+                                ${isActive ? 'bg-white/20 text-white' : 'bg-white/5 text-green-500'}
                             `}>
                                 {!isUnlocked ? (
                                     <Lock size={12} />
                                 ) : isActive ? (
                                     <ChevronRight size={14} />
                                 ) : (
-                                    <div className="w-1.5 h-1.5 rounded-full bg-green-200"></div>
+                                    <div className="w-1.5 h-1.5 rounded-full bg-green-500/40"></div>
                                 )}
                             </div>
                         </button>
@@ -647,7 +641,7 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
 
         {/* RIGHT PANEL - STRICT FIXED HEIGHT (Matches Container) */}
         {/* 'overflow-hidden' on parent ensures the child scrollbar is contained */}
-        <div className="flex-1 bg-white border border-slate-200 rounded-xl shadow-sm relative h-[400px] md:h-full overflow-hidden">
+        <div className="flex-1 bg-slate-900/60 backdrop-blur-sm border border-white/8 rounded-xl relative h-[400px] md:h-full overflow-hidden">
             {!isUnlocked ? (
                 // --- LOCKED STATE ---
                 <div className="absolute inset-0 bg-gradient-to-br from-[#004D40] to-slate-900 rounded-xl flex flex-col items-center justify-center text-center p-6 overflow-hidden">
@@ -676,11 +670,11 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
       </div>
 
       {/* BOTTOM SECTION - DYNAMIC HEIGHT */}
-      <div className={`w-full ${getBottomPanelHeight()} bg-white border border-slate-200 rounded-xl shadow-sm relative overflow-hidden transition-all duration-500 ease-in-out`}>
+      <div className={`w-full ${getBottomPanelHeight()} bg-slate-900/60 backdrop-blur-sm border border-white/8 rounded-xl relative overflow-hidden transition-all duration-500 ease-in-out`}>
           {!isUnlocked ? (
              // --- LOCKED STATE ---
-             <div className="absolute inset-0 bg-slate-100/50 backdrop-blur-[2px] flex items-center justify-center">
-                  <div className="flex items-center gap-2 text-slate-400 font-medium bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm">
+             <div className="absolute inset-0 bg-slate-950/60 backdrop-blur-[2px] flex items-center justify-center">
+                  <div className="flex items-center gap-2 text-slate-500 font-medium bg-slate-900/80 px-4 py-2 rounded-full border border-white/10">
                       <Lock size={16} /> Advanced Metrics Locked
                   </div>
              </div>
