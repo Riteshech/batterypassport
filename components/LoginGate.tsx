@@ -49,16 +49,16 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
       if (active && payload && payload.length) {
         const data = payload[0];
         return (
-          <div className="bg-white/95 backdrop-blur-md p-3 border border-slate-100 shadow-xl rounded-xl">
+          <div className="bg-slate-900/95 backdrop-blur-md p-3 border border-white/10 shadow-xl rounded-xl">
             <div className="flex items-center gap-2 mb-2">
                 <div className="w-2 h-2 rounded-full" style={{ backgroundColor: data.payload.fill }}></div>
-                <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">{data.name}</span>
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">{data.name}</span>
             </div>
             <div className="flex items-baseline gap-1">
-                <span className="text-2xl font-extrabold text-slate-800">{data.value}</span>
-                <span className="text-sm font-semibold text-slate-400">%</span>
+                <span className="text-2xl font-extrabold text-slate-100">{data.value}</span>
+                <span className="text-sm font-semibold text-slate-500">%</span>
             </div>
-            <div className="text-[10px] text-slate-400 mt-1 font-medium">of total battery mass</div>
+            <div className="text-[10px] text-slate-500 mt-1 font-medium">of total battery mass</div>
           </div>
         );
       }
@@ -360,14 +360,14 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
                     </div>
 
                     {/* RIGHT: Chart (60%) */}
-                    <div className="flex-1 flex flex-col relative bg-white h-full overflow-hidden">
-                        
+                    <div className="flex-1 flex flex-col relative bg-transparent h-full overflow-hidden">
+
                         {/* Legend Overlay - Top Right */}
                         <div className="absolute top-4 right-4 z-10 pointer-events-none">
-                             <div className="bg-white/90 backdrop-blur border border-slate-200 shadow-sm rounded-lg px-3 py-1.5 flex items-center gap-2">
-                                <Atom size={14} className="text-[#004D40]"/>
-                                <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wide">
-                                    Chemistry: <span className="text-slate-800">LFP-2026</span>
+                             <div className="bg-slate-900/80 backdrop-blur border border-white/10 rounded-lg px-3 py-1.5 flex items-center gap-2">
+                                <Atom size={14} className="text-green-400"/>
+                                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wide">
+                                    Chemistry: <span className="text-slate-200">LFP-2026</span>
                                 </span>
                              </div>
                         </div>
@@ -375,8 +375,8 @@ const LoginGate: React.FC<LoginGateProps> = ({ isUnlocked, onLogin }) => {
                         <div className="flex-1 w-full h-full relative">
                             {/* Center Text */}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-0">
-                                <div className="text-[10px] uppercase font-bold text-slate-400 mb-0.5 tracking-widest">Total Mass</div>
-                                <div className="text-3xl font-bold text-slate-800 tracking-tighter">45.5<span className="text-sm text-slate-500 font-medium ml-1">kg</span></div>
+                                <div className="text-[10px] uppercase font-bold text-slate-500 mb-0.5 tracking-widest">Total Mass</div>
+                                <div className="text-3xl font-bold text-slate-200 tracking-tighter">45.5<span className="text-sm text-slate-400 font-medium ml-1">kg</span></div>
                             </div>
 
                             <ResponsiveContainer width="100%" height="100%">
